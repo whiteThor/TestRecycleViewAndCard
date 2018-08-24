@@ -1,6 +1,7 @@
 package android.ruben.com.adaptar;
 
 import android.ruben.com.model.DataModel;
+import android.ruben.com.testrecycleviewandcard.MainActivity;
 import android.ruben.com.testrecycleviewandcard.R;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -26,7 +27,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout,parent,false);
-
+        view.setOnClickListener(MainActivity.myOnClickListener);
         return new ViewHolder(view);
     }
 
